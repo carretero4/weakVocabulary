@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/verbTenses"
+        android:title="Verb tenses"
+        android:icon="@mipmap/ic_schedule_black_24dp"></item>
+    <item android:id="@+id/irregular"
+        android:title="Irregular verbs"
+        android:icon="@drawable/ic_error_outline_black_24dp"></item>
+    <item android:id="@+id/pronouns"
+        android:title="Personal pronouns"
+        android:icon="@mipmap/ic_group_black_24dp"></item>
+</menu>

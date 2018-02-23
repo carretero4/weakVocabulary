@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pons.carretero.myvocabulary.MainActivity">
+    <item
+        android:id="@+id/newWord"
+        android:orderInCategory="100"
+        android:title="Add word"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/newCategory"
+        android:orderInCategory="100"
+        android:title="Add category"
+        app:showAsAction="never" />
+
+</menu>

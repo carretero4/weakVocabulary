@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pons.carretero.myvocabulary">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="My weak words"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="WeakVocabulary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".addWordActivity"
+            android:label="New word"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <provider
+            android:name=".data.CategoryProvaider"
+            android:authorities="pons.carretero.myvocabulary"
+            android:exported="false" />
+
+        <activity
+            android:name=".MyWords"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IrregularVerbsActivity"
+            android:label="Irregular verbs"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerbTenses"
+            android:label="Verb tenses"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tense"
+            android:parentActivityName=".VerbTenses"
+            android:screenOrientation="portrait" />
+        <activity android:name=".pronounsActivity"
+            android:label="Personal pronouns"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

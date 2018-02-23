@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/favourite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/unfavourite"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    >
+                        <TextView
+                            android:id="@+id/engTX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hello"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_marginBottom="5dp"/>
+                        <TextView
+                            android:id="@+id/espTX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:text="Hola"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/wordSound"
+                            android:padding="10dp"
+                            android:layout_width="58dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/nobackgroundbutton"
+                            android:src="@drawable/play_circle"
+                            android:layout_alignParentRight="true"
+                            />
+                </RelativeLayout>
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/advertence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Only the words marked as favourite will appear in the quiz."
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/advertence"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/qPalabras"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--
+                <TextView
+                    android:id="@+id/correctLbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CORRECT!"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:textColor="#009900"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In row: "
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                </LinearLayout>
+        -->
+                <TextView
+                    android:id="@+id/englisWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YOU DON'T HAVE ANY FAVOURITE WORD"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="40dp"
+                    android:textColor="#000000"
+                    />
+
+
+                <EditText
+                    android:id="@+id/etEsp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="My language means"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"/>
+
+                <LinearLayout
+                    android:id="@+id/loCorrection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="50dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/labelingles"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="English"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="My language"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/layoutenglish"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/sonidoIV"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/nobackgroundbutton"
+                                android:src="@drawable/play_circle"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center"
+                                />
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Hello"
+                                android:textColor="#000000"
+                                android:textSize="25dp"
+                                android:id="@+id/engCorrect"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Hola"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:id="@+id/espCorrect"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/qRelacionar"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Match the couples:"
+                    android:textColor="#111111"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/esp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="0"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/esp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/esp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/esp4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="3"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/esp5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="4"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/eng1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/eng2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="6"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/eng3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="7"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/eng4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="8"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+                        <TextView
+                            android:id="@+id/eng5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:contentDescription="9"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Hello"
+                            android:textColor="#111111" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
